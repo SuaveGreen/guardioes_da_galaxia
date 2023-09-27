@@ -1,0 +1,52 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../../dist/images/hero_guardioes.png);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    @media (max-width: 768px) {
+        // background-image: url(../images/hero_guardioes.png);
+        padding-top: calc(50vw + 25px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -55px;
+    }
+
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+
+    &__content {
+        max-width: 100%;
+
+        &__branding {
+            max-width: 25vw;
+            margin: 0 auto 38px;
+            margin-left: 65vw;
+
+            @media (max-width: 768px) {
+                max-width: 180px;
+            }
+        }
+
+        .title--small {
+            margin-bottom: 64px;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-top: 60px;
+            }
+
+        }
+    }
+
+}

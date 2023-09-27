@@ -1,5 +1,234 @@
-$bgColor: rgb(39, 238, 105);
+@use 'hero';
+@use 'variaveis';
+@use 'shows';
+@use 'footer';
+@use 'available-devices';
+@use 'header';
+@use 'ticket';
+@use 'posters';
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    list-style: none;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variaveis.$corDeFundo;
+
+    img:first-child {
+        width: 100%;
+        background-size: cover;
+    }
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize (10px);
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: variaveis.$corTextoSecundario;
+}
+
+.text--big {
+    @include text(18px);
+
+    @media (max-width: 768px) {
+        @include text(15px);
+    }
+}
+
+.text {
+    @include text;
+
+    @media (max-width: 768px) {
+        @include text(14px);
+    }
+}
+
+.text--small {
+    @include text(12px);
+
+    @media (max-width: 768px) {
+        @include text(11px);
+    }
+}
+
+.link-text {
+    @include text(18px);
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline;
+}
+
+.title--big {
+    @include title(44px);
+
+    @media (max-width: 768px) {
+        @include title(26px);
+    }
+}
+
+.title {
+    @include title;
+    
+    @media (max-width: 768px) {
+        @include title (24px);
+    }
+}
+
+.title--small {
+    @include title(28px);
+
+    @media (max-width: 768px) {
+        @include title(22px);
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corDeFundoBotaoPrimario;
+    text-transform: uppercase;
+    border-radius: 32px;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+    cursor: pointer;
+
+    &:hover {
+        background-color: (variaveis.$corDeFundoBotaoPrimario);
+        color: variaveis.$corTextoBotao;
+    }
+
+    // &--secundary {
+    //     background-color: variaveis.$corDeFundoBotaoSecundario;
+    //     border-color: variaveis.$corDeFundoBotaoSecundario;
+
+    //     &:hover {
+    //         background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+    //     }
+    // }
+
+    &--dark {
+        background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
+    }
+}
+
+.image-text-section {
+
+    padding: 5.6vw;
+    align-items: center;
+    text-align: center;
+
+    &--rigth{
+        padding: 5.6vw;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        align-items: center;
+        height: 500px;
+
+        h3, p {
+            cursor: default;
+        }
+
+
+        img {
+            max-width: 50%;
+            margin-left: 75px;
+        }
+    }
+
+    &--overview {
+        padding: 5.6vw;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 10vw;
+        display: grid;
+        grid-template-columns: 40vw 40vw ;
+        align-items: center;
+        height: 700px;
+        
+        h3, p {
+            cursor: default;
+            margin-bottom: 24px;
+        }
+
+        img {
+            height: 75%;
+            max-width: 100%;
+            margin-left: 15vw;
+            
+        }
+
+        &--list {
+            display: inline-flex;
+
+            ul {
+                padding-right: 2.5vw;
+
+                ul {
+                    padding-top: 5px;
+                    width: 12vw;
+                }
+            }
+        }
+    }
+
+    &--left {
+        padding: 5.6vw;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 300px ;
+        align-items: center;
+        height: 500px;
+
+        h3, p {
+            cursor: default;
+        }
+
+        img {
+            max-width: 50%;
+            margin-left: 75px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+
+    &__text_container {
+        padding: 0 2vw;
+
+        h3 {
+            margin-bottom: 24px;
+        }
+    }
+
 }

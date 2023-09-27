@@ -1,0 +1,49 @@
+@use 'variaveis';
+
+.posters {
+    padding: 5.6vw;
+    padding-top: 0;
+    padding-bottom: 2.8vw;
+
+    &__list {
+        padding-left: 7.5vw;
+        display: grid;
+        margin-top: 44px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+
+        &__item {
+            padding-bottom: 3.25vw;
+            padding-top: 3.25vw;
+
+            &--meddium {
+                padding-top: 0;
+            }
+
+            &--small {
+                padding-top: 70px;
+                padding-bottom: 0;
+            }
+
+            &--very-small {
+                padding-bottom: 0;
+                padding-top: 100px;
+            }
+
+            
+            img{
+                max-width: 70%;
+                border-radius: 16px;
+                transition: all ease .3s;
+                
+                &:hover {
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+}
