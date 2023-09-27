@@ -29,7 +29,6 @@
 
         @media (max-width: 768px) {
             padding: 0 12px 0 20px;
-
         }
     }
 
@@ -41,7 +40,9 @@
         transition: opacity .5s ease;
 
         @media (max-width: 768px) {
-            max-width: 64px;
+            max-width: 65%;
+            max-height: 75%;
+            margin-top: 10px;
         }
     }
 
@@ -55,6 +56,10 @@
             transition: opacity .5s ease;
             transition: all ease .3s;
 
+            @media (max-width: 768px) {
+                
+            }
+
             &:hover {
                 transform: scale(1.05);
             }
@@ -65,9 +70,9 @@
         height: 50px;
 
         @media (max-width: 768px) {
-            font-size: 13px;
-            padding: 8px 11px;
-            height: 40px;
+            font-size: 12px;
+            padding: 6px 9px;
+            height: 35px;
             letter-spacing: 0;
         }
     }
