@@ -20,9 +20,15 @@
         }
 
         &__item {
+
             img{
                 max-width: 100%;
                 border-radius: 6px;
+                transition: all ease .3s;
+                
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
     }
