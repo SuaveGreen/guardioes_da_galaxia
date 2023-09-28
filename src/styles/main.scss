@@ -130,6 +130,10 @@ body {
     }
 }
 
+#filmes {
+    padding-top: 20vw;
+}
+
 .image-text-section {
 
     padding: 5.6vw;
@@ -216,7 +220,7 @@ body {
         height: 700px;
 
         @media (max-width: 767px) {
-            // padding-bottom: 150vw;
+            // padding-bottom: 150px;
             height: 230vw;
         }
 
@@ -247,8 +251,14 @@ body {
             display: inline-flex;
 
             li {
-                width: 27vw;
-                height: 175px;
+                padding-right: 5vw;
+                width: 15vw;
+
+                @media (max-width: 767px) {
+                    width: 27vw;
+                    // height: 175px;
+                    // padding-bottom: 5vw;
+                }
 
                 ul {
                     padding-right: 2.5vw;
@@ -257,6 +267,7 @@ body {
                         display: flex;
                         padding-bottom: 6vw;
                         padding-right: 4vw;
+                        height: 180px;
                     }
     
                     ul {
