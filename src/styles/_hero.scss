@@ -9,7 +9,7 @@
     background-size: cover;
     
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         background-image: url(../images/hero_guardioes.png);
         background-size: contain;
         background-repeat: no-repeat;
@@ -29,7 +29,7 @@
             margin: 0 auto 38px;
             margin-left: 65vw;
 
-            @media (max-width: 768px) {
+            @media (max-width: 767px) {
                 max-width: 180px;
             }
         }

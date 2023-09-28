@@ -11,7 +11,7 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             grid-template-columns: 1fr 1fr;
             padding-bottom: 10vw;
         }
@@ -38,7 +38,7 @@
         display: flex;
         justify-content: center;
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             white-space: nowrap;
             overflow-x: scroll;
             padding-left: 20px;
@@ -47,7 +47,8 @@
         &__button {
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
-            border: none;            padding-bottom: 5px;
+            border: none;            
+            padding-bottom: 5px;
             background: none;
             text-transform: uppercase;
             margin: 0 1vw;
@@ -58,12 +59,21 @@
             &:hover {
                 transform: scale(1.1);
             }
+
+            @media (max-width: 767px) {
+                font-size: 16px;
+                overflow-x: hidden;
+
+                &:hover {
+                    transform: scale(1);
+                }
+            }
             
             // &--is-active {
             //     border-color: green;
             // }
             
-            // @media (max-width: 768px) {
+            // @media (max-width: 767px) {
             //     font-size: 16px;
             // }
 
