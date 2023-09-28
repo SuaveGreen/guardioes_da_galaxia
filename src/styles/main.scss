@@ -55,6 +55,10 @@ body {
     @media (max-width: 767px) {
         @include text(15px);
     }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @include text(20px)
+    }  
 }
 
 .text {
@@ -63,6 +67,10 @@ body {
     @media (max-width: 767px) {
         @include text(14px);
     }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @include text(19px)
+    }  
 }
 
 .text--small {
@@ -71,6 +79,10 @@ body {
     @media (max-width: 767px) {
         @include text(11px);
     }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        @include text(14px)
+    }  
 }
 
 .link-text {
@@ -132,6 +144,10 @@ body {
 
 #filmes {
     padding-top: 20vw;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        padding-top: 35vw;
+    }  
 }
 
 .image-text-section {
@@ -220,10 +236,12 @@ body {
         height: 700px;
 
         @media (max-width: 767px) {
-            // padding-bottom: 150px;
             height: 230vw;
         }
 
+        @media (min-width: 768px) and (max-width: 1023px) {
+            height: 100vw;
+        }  
         
         h3, p {
             cursor: default;
@@ -239,11 +257,20 @@ body {
                 max-width: 100%;
                 margin-left: 5.5vw;
                 height: 45%;
-            }
+            }      
             
+            @media (min-width: 768px) and (max-width: 1023px) {
+                max-width: 100%;
+                margin-left: 16vw;
+                height: 70%;
+            }  
         }
 
         @media (max-width: 767px) {
+            display: block;
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
             display: block;
         }
 
@@ -256,8 +283,10 @@ body {
 
                 @media (max-width: 767px) {
                     width: 27vw;
-                    // height: 175px;
-                    // padding-bottom: 5vw;
+                }
+                
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    width: 30vw;
                 }
 
                 ul {
@@ -268,6 +297,10 @@ body {
                         padding-bottom: 6vw;
                         padding-right: 4vw;
                         height: 180px;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        display: flex;
                     }
     
                     ul {

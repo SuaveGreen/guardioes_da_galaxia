@@ -30,6 +30,10 @@
         @media (max-width: 767px) {
             padding: 0 12px 0 20px;
         }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            height: 13vw;
+        }
     }
 
     &__logo {
@@ -56,10 +60,6 @@
             transition: opacity .5s ease;
             transition: all ease .3s;
 
-            @media (max-width: 767px) {
-                
-            }
-
             &:hover {
                 transform: scale(1.05);
             }
@@ -74,6 +74,13 @@
             padding: 6px 9px;
             height: 35px;
             letter-spacing: 0;
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            font-size: 24px;
+            letter-spacing: 0;
+            padding: 3.5vw;
+            height: 35px;
         }
     }
 }

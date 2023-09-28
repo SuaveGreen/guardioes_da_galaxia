@@ -16,6 +16,10 @@
         @media (max-width: 767px) {
             grid-template-columns: 1fr 1fr;
         }
+        
+        @media (min-width: 768px) and (max-width: 1023px) {
+            grid-template-columns: 1fr 1fr;
+        }  
 
         &__item {
             text-align: center;

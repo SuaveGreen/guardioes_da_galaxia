@@ -15,6 +15,10 @@
             grid-template-columns: 1fr 1fr;
             padding-bottom: 10vw;
         }
+        
+        @media (min-width: 768px) and (max-width: 1023px) {
+            grid-template-columns: 1fr 1fr;
+        } 
 
         &--is-active {
             display: grid;
@@ -29,6 +33,14 @@
                 
                 &:hover {
                     transform: scale(1.05);
+
+                    @media (max-width: 767px) {
+                        transform: scale(1.05);
+                    }
+
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        transform: scale(1.05);
+                    } 
                 }
             }
         }
